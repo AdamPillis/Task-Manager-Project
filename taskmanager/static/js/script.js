@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.querySelectorAll('.modal');
+    // delete modal initialization
+    let modal = document.querySelectorAll('.modal');
     M.Modal.init(modal);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+      // date picker initialization
+    let datepicker = document.querySelectorAll('.datepicker');
+    M.Datepicker.init(datepicker, {
+        format: "dd mmm, yyyy",
+        i18n: {done: "Select"}
+    });
   });
